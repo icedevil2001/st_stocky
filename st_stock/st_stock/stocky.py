@@ -9,7 +9,7 @@ def get_assets(symbols: Union[list, str],period='1y', **kwargs):
     download stock/cryto information as pandas dateframe
     '''
     if isinstance(symbols, str):
-        return yf.download(symbols, period=period)
+        return yf.download(symbols, period=period, **kwargs)
     else:
         raise ValueError('You still in need to implement ')
 
